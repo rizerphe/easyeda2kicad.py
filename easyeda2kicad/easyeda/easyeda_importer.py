@@ -60,7 +60,7 @@ def _sanitize_component_name(name: str) -> str:
     '[Cut tape]') and strips whitespace.  Returns the base component name.
     """
     for ch in ("(", "["):
-        idx = name.find(ch)
+        idx = name.rfind(ch)
         if idx >= 0:
             name = name[:idx]
     return name.strip()
